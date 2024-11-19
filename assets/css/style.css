@@ -1,0 +1,107 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+#hero {
+    padding: 5rem;
+}
+
+.nav-link{
+    color: #2E3A8A;
+    justify-content: space-between;
+    padding: 0 5px;
+    text-decoration: none; 
+    border-bottom: 2.5px solid transparent; 
+    transition: border-color 0.3s; 
+}
+
+.nav-link:hover{
+    color: #4154F1;
+    border-bottom: 2px solid #4154F1;
+}
+
+.nav-link.active {
+    color: #4154F1;
+    border-bottom: 2px solid #4154F1; /* Keep underline when active */
+}
+
+#hero {
+    background-color: #4154F1;
+    color: white;
+}
+
+#btn-regist{
+    background-color: #2E3A8A;
+}
+
+#btn-regist:hover{
+    background-color: white;
+    color: #2E3A8A;
+}
+
+/* Hide card detail by default */
+.card-detail {
+    display: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+/* Show card detail when hovering over the card */
+.card:hover .card-detail {
+    display: block;
+    opacity: 1; /* Make detail fully visible */
+}
+
+/* Optional: Keep card title visible even when hovering */
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+/* Card hover effect */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 10px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Specific card styles */
+#card-side {
+    background-color: #4154F1;
+}
+
+#card-mid {
+    background-color: #2E3A8A;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Optional hover effect */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+footer{
+    background-color: #4154F1;
+    color: white;
+}
