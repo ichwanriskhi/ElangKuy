@@ -21,7 +21,7 @@
     <section>
         <div class="container d-flex align-items-center justify-content-center min-vh-100">
             <div class="row w-100">
-              <div class="col-md-6 d-flex justify-content-center">
+              <div class="col-md-6 split-left d-flex justify-content-center">
                 <div class="login-card">
                   <div class="mb-4">
                     <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="200px" alt="logo"></a>
@@ -29,14 +29,14 @@
                     <p class="pt-1">Selamat datang! Silakan masuk ke akun Anda:</p>
                   </div>
                   <form>
-                    <div class="mb-3 mt-3">
+                    <div class="mb-3 mt-5">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Masukkan alamat email...">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Masukkan alamat email...">
                     </div>
                     <div class="mb-3">
                       <label for="password" class="form-label">Kata Sandi</label>
                       <div class="input-group">
-                        <input type="password" class="form-control" id="password" placeholder="Masukkan kata sandi ...">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan kata sandi ...">
                       </div>
                     </div>
                     <div class="d-flex justify-content-end">
@@ -51,7 +51,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 image-card text-center">
+              <div class="col-md-6 split-right image-card text-center">
                 <div>
                   <h4 class="mb-1 fw-bold">Temukan barang yang anda inginkan</h4>
                   <p class="mb-4">Barang yang anda butuhkan akan tersedia disini</p>
@@ -81,7 +81,7 @@
         document.addEventListener('DOMContentLoaded', function() {
           var myCarousel = document.querySelector('#carouselExampleSlidesOnly');
           var carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 2000,
+            interval: 3000,
             ride: 'carousel'
           });
         });
