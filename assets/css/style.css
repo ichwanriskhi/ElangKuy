@@ -119,3 +119,21 @@ footer{
 .carousel-inner img {
     max-width: 500px; 
 }
+
+/* Membagi background menjadi dua */
+.split-left {
+    background-color: #ffffff; /* Putih */
+    height: 100vh; /* Full height */
+}
+
+.split-right {
+    background-color: #f8f9fa; /* Abu-abu */
+    height: 100vh; /* Full height */
+}
+
+.split-left,
+.split-right {
+    display: flex;
+    align-items: center; /* Tengah secara vertikal */
+    justify-content: center; /* Tengah secara horizontal */
+}
