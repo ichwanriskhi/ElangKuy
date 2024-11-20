@@ -105,3 +105,17 @@ footer{
     background-color: #4154F1;
     color: white;
 }
+
+#login {
+    border-radius: 10px;
+    background-color: #4154F1;
+}
+
+#login:hover {
+    background-color: white;
+    color: #4154F1;
+}
+
+.carousel-inner img {
+    max-width: 500px; 
+}
