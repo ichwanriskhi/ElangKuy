@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3366ff;
+    margin: 0;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.otp-inputs input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.otp-inputs input:focus {
+    border-color: #3366ff;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: #3366ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 135px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: #2554cc;
+}
+
