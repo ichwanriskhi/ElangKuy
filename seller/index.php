@@ -50,7 +50,7 @@ if($_SESSION['status'] == ""){
                             <a class="nav-link fw-medium" href="#"><i class="bi bi-person-lines-fill side-icon me-2"></i> Profil</a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-archive-fill side-icon me-2"></i> Barang </a>
+                            <a class="nav-link fw-medium" href="barang.php"><i class="bi bi-archive-fill side-icon me-2"></i> Barang </a>
                         </li>
                         <li class="nav-item my-2">
                             <a class="nav-link fw-medium" href="#"><i class="bi bi-basket3-fill side-icon me-2"></i> Pesanan</a>
