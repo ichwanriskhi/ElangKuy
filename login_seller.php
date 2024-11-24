@@ -70,7 +70,7 @@
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan kata sandi ...">
                             </div>
                             <div class="d-grid mt-4">
-                                <button type="submit" id="register" class="btn btn-primary">Daftar</button>
+                                <button type="submit" id="register" class="btn btn-primary">Masuk</button>
                             </div>
                         </form>
                         <div class="text-link text-center mt-3">

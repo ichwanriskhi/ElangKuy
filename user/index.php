@@ -53,10 +53,27 @@ if($_SESSION['status'] == ""){
                             <a class="nav-link fw-medium" href="#"><i class="bi bi-question-circle side-icon me-2"></i> Bantuan</a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-box-arrow-left side-icon me-2"></i> Keluar</a>
+                            <a class="nav-link fw-medium" data-bs-toggle="modal" data-bs-target="#logout"><i class="bi bi-box-arrow-left side-icon me-2"></i> Keluar</a>
                         </li>
                     </ul>
                 </aside>
+                <div class="modal fade" id="logout" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Logout</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Apakah Anda Yakin Ingin Mengakhiri Sesi Ini?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                <a href="../logout.php" class="btn btn-danger">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Basic Modal-->
             </div>
         </div>
         <div class="col-md-8 mt-3">
