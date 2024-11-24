@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="assets/css/FAQ.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="150px" alt="logo"></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 medium fw-bolder">
+                    <li class="nav-item px-3"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item px-3"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item px-3"><a class="nav-link" href="register_user.php">Daftar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login_user.php">Masuk</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FAQ Section -->
+    <div class="faq-text"> 
+        <div class="bold-text">
+            <p>Pertanyaan yang Sering Diajukan</p>
+        </div>
+        <section> 
+            <div class="faq-container">
+                <div class="sidebar">
+                    <button class="sidebar-button active" data-section="informasi-umum">Informasi Umum</button>
+                    <button class="sidebar-button" data-section="akun">Akun</button>
+                </div>
+                <div class="content">
+                    <!-- Informasi Umum -->
+                    <div id="informasi-umum" class="content-section active">
+                        <div class="faq-list">
+                            <!-- FAQ Items -->
+                            <div class="faq-item">
+                                <button class="faq-question">Apa yang dimaksud dengan "harga awal"? <span>&#x25BC;</span></button>
+                                <div class="faq-answer">
+                                    Harga awal adalah harga minimal barang yang akan dilelang dan ditetapkan oleh Penjual/Pemilik Barang.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Apa yang dimaksud dengan "tawaran tertinggi"? <span>&#x25BC;</span></button>
+                                <div class="faq-answer">
+                                  Tawaran tertinggi adalah jumlah uang tertinggi yang ditawarkan oleh peserta lelang untuk suatu barang selama periode lelang berlangsung.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Bagaimana cara melihat tingkat kepercayaan penjual? <span>&#x25BC;</span></button>
+                                <div class="faq-answer">
+                                  Tingkat kepercayaan penjual biasanya dapat dilihat melalui rating atau ulasan yang diberikan oleh pembeli sebelumnya. Ini dapat ditemukan
+                                  di halaman “Detail barang".
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                              <button class="faq-question">Bagaimana cara melihat barang lelang yang sudah dimenangkan? <span>&#x25BC;</span></button>
+                              <div class="faq-answer">
+                                  Untuk melihat barang lelang yang sudah dimenangkan, Anda dapat pergi ke akun Anda dan mencari bagian “Aktivitas” Di sana, akan terdapat
+          daftar barang yang berhasil Anda menangkan.
+                              </div>
+                            </div>
+                            <div class="faq-item">
+                              <button class="faq-question">Bagaimana cara menggunakan fitur diskusi? <span>&#x25BC;</span></button>
+                              <div class="faq-answer">
+                                  Fitur diskusi biasanya tersedia pada halaman “Detail barang”. Anda dapat menggunakannya dengan menulis pertanyaan atau komentar di kolom
+          yang disediakan dan mengirimkannya. Penjual atau peserta lelang lainnya dapat memberikan tanggapan di sana.
+                              </div>
+                            </div>
+                            <div class="faq-item">
+                              <button class="faq-question">Bagaimana cara memberikan ulasan kepada penjual? <span>&#x25BC;</span></button>
+                              <div class="faq-answer">
+                                  Setelah transaksi selesai, pembeli akan diarahkan ke halaman “Detail transaksi” untuk memberikan ulasan. Anda bisa memberikan rating
+          bintang dan menulis ulasan mengenai pengalaman Anda dengan penjual. 
+                              </div>
+                                </div>
+                            <div class="faq-item">
+                              <button class="faq-question">Bagaimana cara melihat detail lelang yang telah diikuti? <span>&#x25BC;</span></button>
+                              <div class="faq-answer">
+                                  Anda dapat melihat detail lelang yang telah diikuti dengan pergi ke menu “Aktivitas”. Di sana akan ditampilkan informasi lengkap mengenai
+          lelang yang Anda ikuti. 
+                              </div>
+                                  </div>
+                            <div class="faq-item">
+                              <button class="faq-question">Bagaimana cara melihat penawaran tertinggi? <span>&#x25BC;</span></button>
+                              <div class="faq-answer">
+                                  Penawaran tertinggi biasanya ditampilkan pada halaman “Detail barang”. Anda bisa melihat jumlah tawaran tertinggi saat ini .
+                              </div>
+                          </div>
+                          <div class="faq-item">
+                            <button class="faq-question">Ketentuan apa saja yang memungkinkan untuk pengembalian barang?<span>&#x25BC;</span></button>
+                            <div class="faq-answer">
+                              Ketentuan pengajuan pengembalian dilakukan dalam waktu tidak lebih dari 2 x 24 jam setelah barang diterima, serta barang harus dikembalikan
+                              dalam kondisi asli dengan kemasan dan aksesoris lengkap.
+                            </div>
+                                </div>
+                          <div class="faq-item">
+                            <button class="faq-question">Apakah barang lelah telah diseleksi oleh admin?<span>&#x25BC;</span></button>
+                            <div class="faq-answer">
+                              Platform lelang “ElangKuy” memiliki proses seleksi oleh admin untuk memastikan barang yang dilelang memenuhi standar.
+                            </div>
+                        </div>
+          
+                        </div>
+                    </div>
+                    <!-- Akun -->
+                    <div id="akun" class="content-section">
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question">Bagaimana cara melakukan registrasi/membuat akun baru? <span>&#x25BC;</span></button>
+                                <div class="faq-answer">
+                                    Klik daftar pada landing page, lalu isi pendaftaran akun dengan memasukkan identitas yang diperlukan. 
+                                    Selanjutnya, Anda wajib melengkapi beberapa data di halaman profil Anda.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Apa yang harus saya lakukan jika lupa kata sandi? <span>&#x25BC;</span></button>
+                                <div class="faq-answer">
+                                  Anda dapat mengatur ulang kata sandi dengan mengklik 'Lupa Kata Sandi?', lalu anda isa memasukkan email/nomor telepon yang terdaftar, lalu
+              anda bisa melakukan verifikasi terlebih dahulu, kemudian aplikasi akan mengirimkan kode OTP lewat e-mail anda yg sudah terdaftar, anda dapat
+              mengatur ulang kata sandi.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Bagaimana cara memperbarui informasi profil saya? <span>&#x25BC;</span></button>
+                                <div class="faq-answer">
+                                  di sebelah kiri ada ikon profil bisa anda klik nanti akan muncul detail profil anda, lalu anda bisa memperbarui isi profil diri anda lalu klik simpan. 
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                              <button class="faq-question">Bagaimana cara memperbarui nomor telepon yang terkait dengan akun saya? <span>&#x25BC;</span></button>
+                              <div class="faq-answer">
+                                  di sebelah kiri ada ikon profil bisa anda klik nanti akan muncul detail profil anda, lalu anda bisa memperbarui nomor telepon yang terkain dengan
+              akun anda lalu klik simpan.
+                              </div>
+                            </div>
+                            <div class="faq-item">
+                              <button class="faq-question">Apakah akun pribadi bisa digunakan untuk mengikuti lelang orang lain? <span>&#x25BC;</span></button>
+                              <div class="faq-answer">
+                                  Akun pribadi pada Elangkuy hanya dapat digunakan untuk mengikuti lelang untuk diri sendiri.
+                              </div>
+                            </div>
+                            <div class="faq-item">
+                              <button class="faq-question">Bagaimana jika saya lupa alamat email? <span>&#x25BC;</span></button>
+                              <div class="faq-answer">
+                                  Silahkan Anda membuat akun baru dengan data yang sama dengan alamat email yang berbeda. 
+                              </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Logic untuk berpindah antar menu
+        document.querySelectorAll('.sidebar-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Hilangkan kelas "active" dari semua tombol
+                document.querySelectorAll('.sidebar-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Sembunyikan semua konten
+                document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+
+                // Tampilkan konten yang sesuai
+                const sectionId = button.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+
+        // Dropdown FAQ logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+
+                // Toggle visibility dari jawaban
+                answer.classList.toggle('show');
+
+                // Ganti ikon dropdown
+                const icon = button.querySelector('span');
+                icon.innerHTML = answer.classList.contains('show') ? '&#x25B2;' : '&#x25BC;';
+            });
+        });
+    </script>
+</body>
+</html>
