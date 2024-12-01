@@ -3,6 +3,12 @@ body {
     background-color: white;
 }
 
+.login-user {
+    margin: 0; /* Hilangkan margin default */
+    height: 100vh; /* Sesuaikan tinggi dengan viewport */
+    background: linear-gradient(to right, white 50%, #f8f9fa 50%);
+}
+
 a {
     text-decoration: none;
 }
@@ -120,20 +126,6 @@ footer{
     max-width: 500px; 
 }
 
-/* Membagi background menjadi dua */
-.split-left {
-    background-color: #ffffff; /* Putih */
-    height: 100vh; /* Full height */
-}
-
-.split-right {
-    background-color: #f8f9fa; /* Abu-abu */
-    height: 100vh; /* Full height */
-}
-
-.split-left,
-.split-right {
-    display: flex;
-    align-items: center; /* Tengah secara vertikal */
-    justify-content: center; /* Tengah secara horizontal */
+.create {
+    margin: 3rem;
 }

@@ -19,7 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="login-user">
     <section>
         <div class="container d-flex align-items-center justify-content-center min-vh-100">
             <div class="row w-100">
@@ -71,23 +71,25 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 split-right image-card text-center">
+              <div class="col-md-6 image-card text-center">
                 <div>
                   <h4 class="mb-1 fw-bold">Temukan barang yang anda inginkan</h4>
                   <p class="mb-4">Barang yang anda butuhkan akan tersedia disini</p>
-                  <div id="carouselExampleSlidesOnly" class="carousel slide">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="assets/img/carousel1.png" alt="First slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/img/carousel2.png" alt="Second slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/img/carousel3.png" alt="Third slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/img/carousel4.png" alt="Fourth slide">
+                  <div class="ms-5">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="assets/img/carousel1.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="assets/img/carousel2.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="assets/img/carousel3.png" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="assets/img/carousel4.png" alt="Fourth slide">
+                        </div>
                       </div>
                     </div>
                   </div>

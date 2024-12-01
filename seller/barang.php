@@ -1,75 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+include "../db_connect.php";
 
-    <title>ElangKuy</title>
-    <!-- logo halaman -->
-    <link href="../assets/img/logohalaman.png" rel="icon">
+$sqlStatement = "SELECT * FROM barang";
+$query = mysqli_query($conn, $sqlStatement);
+$data = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+$dtdisetujui = "SELECT COUNT(*) as total FROM barang WHERE status = 'disetujui'";
+$dtbelumdisetujui = "SELECT COUNT(*) as total FROM barang WHERE status = 'Belum Disetujui'";
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+$disetujui = mysqli_query($conn, $dtdisetujui);
+$belumdisetujui = mysqli_query($conn, $dtbelumdisetujui);
 
-    <!-- Boostrap Icons & Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+if ($disetujui && $belumdisetujui) {
+    $datasetuju = mysqli_fetch_assoc($disetujui);
+    $databelum = mysqli_fetch_assoc($belumdisetujui);
+    
+    $total_disetujui = $datasetuju['total'];
+    $total_belumdisetujui = $databelum['total'];
+} else {
+    // Penanganan jika query gagal
+    $total_disetujui = 0;
+    $total_belumdisetujui = 0;
+}
 
-    <!-- Chart JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+include '../layout/sidebar_seller.php';
 
-    <link rel="stylesheet" href="../assets/css/dashboard.css">
-</head>
-<body>
-    <div class="row">
-        <div class="col-md-2">
-            <div class="d-flex flex-column align-items-center">
-                <aside class="side-bar border-box bg-white ms-4 mt-3 pt-3 px-5">
-                    <div class="logo">
-                        <img src="../assets/img/logo.png" width="150px" alt="logo">
-                    </div>
-                    <ul class="nav flex-column border-top border-grey mt-4">
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-grid-fill side-icon me-2"></i> Beranda</a>
-                        </li>
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-person-lines-fill side-icon me-2"></i> Profil</a>
-                        </li>
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-archive-fill side-icon me-2"></i> Barang </a>
-                        </li>
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-basket3-fill side-icon me-2"></i> Pesanan</a>
-                        </li>
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-chat-right-dots-fill side-icon me-2"></i> Layanan</a>
-                        </li>
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-clipboard-fill side-icon me-2"></i> Laporan</a>
-                        </li>
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-question-circle-fill side-icon me-2"></i> Bantuan</a>
-                        </li>
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-pencil-square side-icon me-2"></i> Ulasan</a>
-                        </li>
-                        <li class="nav-item my-2">
-                            <a class="nav-link fw-medium" href="#"><i class="bi bi-box-arrow-left side-icon me-2"></i> Keluar</a>
-                        </li>
-                    </ul>
-                </aside>
-            </div>
-        </div>
+?>
+
+
         <div class="main col-md-10">
             <nav aria-label="breadcrumb" class="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+                  <li class="breadcrumb-item"><a href="index.php">Beranda</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Barang</li>
                 </ol>
             </nav>
@@ -78,17 +40,52 @@
                 <div class="items-status d-flex justify-content-between me-3">
                     <div>
                         <p>Telah Disetujui</p>
-                        <h4>2</h4>
+                        <h4>
+                            <?= $total_disetujui ?>
+                        </h4>
                     </div>
                     <div>
                         <p>Belum Disetujui</p>
-                        <h4>2</h4>
+                        <h4>
+                        <?= $total_belumdisetujui ?>
+                        </h4>
                     </div>
                 </div>
+                <?php 
+                if(isset($_GET['info'])){
+                    if($_GET['info'] == "gagal"){ ?>
+                    <div class="alert alert-warning alert-dismissible mt-2 me-3">
+                        <h5>Mohon Maaf</h5>
+                        Anda gagal menambahkan data barang
+                    </div>
+
+                    <?php }else if($_GET['info'] == "hapus"){ ?>
+                    <div class="alert alert-warning alert-dismissible mt-2 me-3">
+                        <h5>Berhasil</h5>
+                        Anda berhasil menghapus data barang
+                    </div>
+
+                    <?php }else if($_GET['info'] == "edit gagal"){ ?>
+                    <div class="alert alert-warning alert-dismissible mt-2 me-3">
+                        <h5>Gagal</h5>
+                        Anda gagal mengedit data barang
+                    </div>
+
+                    <?php }else if($_GET['info'] == "edit"){ ?>
+                    <div class="alert alert-success alert-dismissible mt-2 me-3">
+                        <h5>Berhasil</h5>
+                        Anda berhasil mengedit data barang
+                    </div>
+                                            
+                    <?php }else if($_GET['info'] == "berhasil"){ ?>
+                    <div class="alert alert-success alert-dismissible mt-2 me-3">
+                        <h5>Selamat</h5>
+                        Anda berhasil menambahkan data barang
+                    </div>
+                    <?php } } ?>
                 <div class="button d-flex justify-content-between mt-3 me-3">
                     <div>
-                        <button class="btn btn-primary">Ajukan Barang</button>
-
+                        <button class="btn btn-primary"><a href="addbarang.php" class="text-white">Ajukan Barang</a></button>
                     </div>
                     <div class="search-table">
                         <input type="text" placeholder="Cari data barang"><i class="bi bi-search search-table-icon"></i>
@@ -107,14 +104,23 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <th></th>
+                            <?php
+                                foreach ($data as $key => $dtbrg) {
+                                ?>
+                                <td><?= ++$key ?></td>
+                                <td><?= $dtbrg["nama"]; ?></td>
+                                <td><?= $dtbrg["kondisi"]; ?></td>
+                                <td><?= $dtbrg["id_kategori"]; ?></td>
+                                <td>Rp. <?= number_format($dtbrg["harga_awal"]); ?></td>
+                                <td><?= $dtbrg["status"]; ?></td>
+                                <td>
+                                <?php if ($dtbrg["status"] == "belum disetujui") { ?>
+                                    <a href="editbarang.php?id_barang=<?= $dtbrg["id_barang"]; ?>" class="btn btn-sm btn-info">Edit</a>
+                                    <a href="delete.php?id_barang=<?= $dtbrg["id_barang"]; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus produk ini?')">Hapus</a>
+                                <?php } ?>
+                                </td>
                             </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
