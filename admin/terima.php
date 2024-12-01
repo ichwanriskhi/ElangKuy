@@ -13,5 +13,8 @@ $result = mysqli_query($conn, $query);
 if ($result === false) {
     echo "Terjadi error, tidak bisa menerima data: " . mysqli_error($conn);
 }
-echo "Data berhasil disetujui";
+echo "<script>
+        alert('Data berhasil disetujui');
+        window.location.href = 'index.php';
+    </script>";
 ?>
