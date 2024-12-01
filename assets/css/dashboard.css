@@ -1,6 +1,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 aside {
@@ -37,11 +38,13 @@ aside {
     z-index: 50;
 }
 
-.search input{
+
+.search input[type=text]{
     background-color: #fff;
+    width: 65.5rem;
     border-style: none;
     border-radius: 10px;
-    padding: 10px 25.4rem;
+    padding: 10px 10px;
     color: black;
 }
 
@@ -125,6 +128,10 @@ a {
 .filter-section .form-check {
     padding: 3px;
 }
+
+/* .filter-container {
+    width: 250px;
+} */
 
 .filter-container .btn {
     text-align: center;
@@ -261,4 +268,24 @@ a {
 
 .table .thead {
     background-color: #25308b;
+}
+
+.form-barang-lelang {
+    background-color: white;
+    padding: 4rem 5rem;
+    border-radius: 10px;
+}
+
+.photo-upload {
+    border: 2px dashed #ced4da;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    margin-bottom: 0.7rem;
+}
+
+.ajukan .btn {
+    background-color: #4154f1;
+    padding: 8px 30px;
 }
