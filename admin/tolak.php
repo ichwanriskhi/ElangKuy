@@ -13,5 +13,8 @@ $result = mysqli_query($conn, $query);
 if ($result === false) {
     echo "Tidak bisa menolak data: " . mysqli_error($conn);
 }
-echo "Data berhasil ditolak";
+echo "<script>
+        alert('Data berhasil ditolak');
+        window.location.href = 'index.php';
+    </script>";
 ?>
